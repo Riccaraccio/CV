@@ -14,13 +14,21 @@
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{amsmath, amssymb}
 \RequirePackage[dvipsnames]{xcolor}
+
+\definecolor{britishgreen}{RGB}{0, 66, 37}
+\definecolor{green-link}{RGB}{0, 122, 69}
+
 \RequirePackage[
    colorlinks=true,
-   linkcolor=PineGreen,
-   linkbordercolor=PineGreen,
+   %linkcolor=PineGreen,
+   linkcolor=green-link,
+   %linkbordercolor=PineGreen,
+   linkbordercolor=green-link
    filecolor=magenta,
-   urlcolor=PineGreen,
-   urlbordercolor=PineGreen,
+   % urlcolor=PineGreen,
+   % urlbordercolor=PineGreen,   
+   urlcolor=green-link,
+   urlbordercolor=green-link,
    citecolor=blue
 ]{hyperref}
 \RequirePackage[shortlabels]{enumitem}
@@ -46,11 +54,15 @@
     style=numeric-comp
 ]{biblatex}
 
+
+
 % Create a command for the boxed title
 \newcommand{\boxedsection}[1]{%
    \begin{tcolorbox}[
-      colback=gray!20,
-      colframe=black,
+      %colback=gray!20,
+        colback=britishgreen,
+      %colframe=black,
+      coltext=white,
       boxrule=.5pt,
       width=\textwidth,
       arc=0mm,
@@ -140,7 +152,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\lfoot{\small\textit{Curriculum Vitae of Timoteo Dinelli --- \today}}
+\lfoot{\small\textit{Curriculum Vitae of Riccardo Caraccio --- \today}}
 \rfoot{\small\thepage/\pageref*{LastPage}}
 
 % Bibliography name highlighting
